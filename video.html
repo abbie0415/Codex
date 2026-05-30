@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Video - Sakura Goods</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Sakura Goods home">
+        <span class="brand-mark">S</span>
+        <span>Sakura Goods</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Video navigation">
+        <a href="index.html#catalog">Shop</a>
+        <a href="video.html">Video</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <a class="cart-button" href="index.html#catalog">Back to shop</a>
+    </header>
+
+    <main class="video-page">
+      <section class="video-hero" aria-labelledby="videoTitle">
+        <p class="eyebrow">Product video</p>
+        <h1 id="videoTitle">Sakura Goods in motion</h1>
+        <p>
+          Watch the featured product video and explore the look, texture, and
+          feel of the collection.
+        </p>
+      </section>
+
+      <section class="video-stage" aria-label="Sakura Goods video">
+        <video controls playsinline preload="metadata">
+          <source src="assets/japan-product-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+    </main>
+  </body>
+</html>
