@@ -1,77 +1,77 @@
 const products = [
   {
-    id: "ceramic-lamp",
-    name: "Ceramic Table Lamp",
-    category: "Home",
-    price: 68,
-    description: "A warm matte lamp with a linen shade for soft evening light.",
-    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80"
+    id: "uji-matcha",
+    name: "Uji Ceremonial Matcha",
+    category: "Tea",
+    price: 38,
+    description: "Stone-milled green tea powder from Kyoto with a smooth, vivid finish.",
+    image: "assets/iced-matcha.webp"
   },
   {
-    id: "canvas-tote",
-    name: "Structured Canvas Tote",
-    category: "Travel",
-    price: 74,
-    description: "A sturdy daily tote with reinforced handles and interior pockets.",
-    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=80"
+    id: "mino-bowl",
+    name: "Mino Ware Rice Bowl",
+    category: "Ceramics",
+    price: 32,
+    description: "A glazed ceramic bowl inspired by traditional Mino tableware.",
+    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=80"
   },
   {
-    id: "linen-shirt",
-    name: "Washed Linen Shirt",
-    category: "Style",
-    price: 56,
-    description: "Breathable linen with a relaxed cut and natural texture.",
-    image: "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=900&q=80"
+    id: "washi-notebook",
+    name: "Washi Paper Notebook",
+    category: "Stationery",
+    price: 18,
+    description: "A lay-flat notebook with textured Japanese paper for ink and pencil.",
+    image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80"
   },
   {
-    id: "stoneware-mug",
-    name: "Stoneware Mug Set",
-    category: "Home",
-    price: 42,
-    description: "Four hand-finished mugs with an easy stackable profile.",
-    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=80"
+    id: "furoshiki-wrap",
+    name: "Cotton Furoshiki Wrap",
+    category: "Textiles",
+    price: 24,
+    description: "Reusable wrapping cloth for gifts, lunch boxes, and small carries.",
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
   },
   {
-    id: "travel-bottle",
-    name: "Insulated Travel Bottle",
-    category: "Wellness",
-    price: 34,
-    description: "Keeps drinks cold or warm with a leak-resistant steel body.",
-    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=80"
+    id: "yuzu-ponzu",
+    name: "Yuzu Ponzu Sauce",
+    category: "Pantry",
+    price: 16,
+    description: "Bright citrus soy sauce for noodles, grilled fish, tofu, and salads.",
+    image: "https://images.unsplash.com/photo-1607301406259-dfb186e15de8?auto=format&fit=crop&w=900&q=80"
   },
   {
-    id: "desk-tray",
-    name: "Walnut Desk Tray",
-    category: "Home",
-    price: 39,
-    description: "A low-profile organizer for keys, cards, pens, and cables.",
-    image: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=900&q=80"
+    id: "bamboo-whisk",
+    name: "Bamboo Matcha Whisk",
+    category: "Tea",
+    price: 22,
+    description: "A chasen-style whisk for preparing smooth bowls of matcha.",
+    image: "https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?auto=format&fit=crop&w=900&q=80"
   },
   {
-    id: "day-pack",
-    name: "Compact Day Pack",
-    category: "Travel",
-    price: 89,
-    description: "A clean weather-resistant backpack for commuting and short trips.",
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+    id: "tenugui-towel",
+    name: "Tenugui Cotton Towel",
+    category: "Textiles",
+    price: 20,
+    description: "Lightweight cotton cloth for kitchen use, wrapping, and travel.",
+    image: "https://images.unsplash.com/photo-1601762603339-fd61e28b698a?auto=format&fit=crop&w=900&q=80"
   },
   {
-    id: "knit-scarf",
-    name: "Merino Knit Scarf",
-    category: "Style",
-    price: 48,
-    description: "A lightweight merino layer with a soft hand feel.",
-    image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=900&q=80"
+    id: "kintsugi-kit",
+    name: "Kintsugi Repair Kit",
+    category: "Ceramics",
+    price: 46,
+    description: "A beginner-friendly repair kit inspired by golden joinery traditions.",
+    image: "https://images.unsplash.com/photo-1597696929736-6d13bed8e6a8?auto=format&fit=crop&w=900&q=80"
   }
 ];
 
 const bundle = {
-  id: "weekend-bundle",
-  name: "Weekend Carry Set",
-  category: "Travel",
-  price: 129,
-  description: "Tote, bottle, and pouch bundled for quick getaways.",
-  image: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=900&q=80"
+  id: "kyoto-tea-bundle",
+  name: "Kyoto Tea Ritual Bundle",
+  category: "Tea",
+  price: 76,
+  description: "Matcha, bamboo whisk, and ceramic bowl for a complete tea setup.",
+  image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=900&q=80"
 };
 
 const state = {
@@ -91,11 +91,12 @@ const cartEmpty = document.querySelector("#cartEmpty");
 const cartCount = document.querySelector("#cartCount");
 const cartTotal = document.querySelector("#cartTotal");
 const addFeatured = document.querySelector("#addFeatured");
+const contactForm = document.querySelector(".contact-form");
 
 function formatPrice(value) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD"
+    currency: "MYR"
   }).format(value);
 }
 
@@ -234,6 +235,12 @@ cartDrawer.addEventListener("click", (event) => {
 addFeatured.addEventListener("click", () => {
   addToCart(bundle);
   openCart();
+});
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const button = contactForm.querySelector("button");
+  button.textContent = "Message ready";
 });
 
 document.addEventListener("keydown", (event) => {

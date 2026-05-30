@@ -3,25 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Northline Market</title>
+    <title>Sakura Goods</title>
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="Northline Market home">
-        <span class="brand-mark">N</span>
-        <span>Northline</span>
+      <a class="brand" href="#" aria-label="Sakura Goods home">
+        <span class="brand-mark">S</span>
+        <span>Sakura Goods</span>
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#catalog">Shop</a>
         <a href="#featured">Featured</a>
-        <a href="#support">Support</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <button class="cart-button" type="button" id="cartButton" aria-label="Open cart">
-        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-icon" aria-hidden="true">Cart</span>
         <span id="cartCount">0</span>
       </button>
     </header>
@@ -29,15 +30,15 @@
     <main>
       <section class="hero" aria-labelledby="heroTitle">
         <div class="hero-copy">
-          <p class="eyebrow">Curated essentials for everyday style</p>
-          <h1 id="heroTitle">Northline Market</h1>
+          <p class="eyebrow">Japanese craft, tea, home, and pantry goods</p>
+          <h1 id="heroTitle">Sakura Goods</h1>
           <p>
-            Shop refined home, travel, and personal goods selected for quality,
-            usefulness, and a calmer daily routine.
+            Discover thoughtfully selected products from Japan: matcha, ceramics,
+            stationery, textiles, and everyday pieces made with quiet precision.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#catalog">Shop collection</a>
-            <a class="secondary-action" href="#featured">View picks</a>
+            <a class="primary-action" href="#catalog">Shop Japan goods</a>
+            <a class="secondary-action" href="#about">Our story</a>
           </div>
         </div>
       </section>
@@ -45,25 +46,26 @@
       <section class="toolbar" aria-label="Product controls">
         <label class="search-field">
           <span>Search products</span>
-          <input id="searchInput" type="search" placeholder="Search bags, lamps, ceramics..." />
+          <input id="searchInput" type="search" placeholder="Search matcha, ceramics, stationery..." />
         </label>
 
         <div class="category-tabs" role="tablist" aria-label="Product categories">
           <button class="tab active" type="button" data-category="All">All</button>
-          <button class="tab" type="button" data-category="Home">Home</button>
-          <button class="tab" type="button" data-category="Travel">Travel</button>
-          <button class="tab" type="button" data-category="Style">Style</button>
-          <button class="tab" type="button" data-category="Wellness">Wellness</button>
+          <button class="tab" type="button" data-category="Tea">Tea</button>
+          <button class="tab" type="button" data-category="Ceramics">Ceramics</button>
+          <button class="tab" type="button" data-category="Stationery">Stationery</button>
+          <button class="tab" type="button" data-category="Textiles">Textiles</button>
+          <button class="tab" type="button" data-category="Pantry">Pantry</button>
         </div>
       </section>
 
       <section class="featured" id="featured" aria-labelledby="featuredTitle">
         <div>
-          <p class="eyebrow">Editor pick</p>
-          <h2 id="featuredTitle">Weekend carry set</h2>
+          <p class="eyebrow">Featured set</p>
+          <h2 id="featuredTitle">Kyoto tea ritual bundle</h2>
           <p>
-            A coordinated trio for travel days: a structured tote, insulated
-            bottle, and compact pouch.
+            Ceremonial matcha, a bamboo whisk, and a handmade chawan bowl for a
+            calm daily tea moment at home.
           </p>
         </div>
         <button class="primary-action compact" type="button" id="addFeatured">
@@ -75,7 +77,7 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Catalog</p>
-            <h2 id="catalogTitle">Latest arrivals</h2>
+            <h2 id="catalogTitle">Made in Japan selections</h2>
           </div>
           <p id="resultCount">8 products</p>
         </div>
@@ -85,17 +87,67 @@
 
       <section class="support-strip" id="support" aria-label="Shopping benefits">
         <div>
-          <strong>Free shipping</strong>
-          <span>Orders over $75</span>
+          <strong>Japan-sourced</strong>
+          <span>Selected from makers and specialty suppliers</span>
         </div>
         <div>
-          <strong>Easy returns</strong>
-          <span>30-day return window</span>
+          <strong>Carefully packed</strong>
+          <span>Protected packaging for ceramics and pantry goods</span>
         </div>
         <div>
-          <strong>Secure checkout</strong>
-          <span>Encrypted payments</span>
+          <strong>Fast support</strong>
+          <span>Questions answered within one business day</span>
         </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="aboutTitle">
+        <div class="about-media" aria-hidden="true"></div>
+        <div class="about-copy">
+          <p class="eyebrow">About us</p>
+          <h2 id="aboutTitle">A small shop for Japanese everyday beauty</h2>
+          <p>
+            Sakura Goods brings together items that make daily routines feel more
+            intentional: tea tools, tableware, notebooks, textiles, and pantry
+            staples from Japan. We focus on useful products with strong materials,
+            honest details, and timeless design.
+          </p>
+          <div class="about-points">
+            <span>Authentic product curation</span>
+            <span>Maker-inspired collections</span>
+            <span>Practical gifts and home goods</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contactTitle">
+        <div>
+          <p class="eyebrow">Contact us</p>
+          <h2 id="contactTitle">Need help choosing a Japanese product?</h2>
+          <p>
+            Send us a note for product questions, gift ideas, wholesale requests,
+            or help with an order.
+          </p>
+          <div class="contact-details">
+            <a href="mailto:helloharu.jp@gamail.com">helloharu.jp@gamail.com</a>
+            <a href="tel:+15550140188">+1 555 014 0188</a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="What are you looking for?"></textarea>
+          </label>
+          <button class="checkout-button" type="submit">Send message</button>
+        </form>
       </section>
     </main>
 
