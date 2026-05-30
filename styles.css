@@ -251,6 +251,7 @@ a {
 }
 
 .featured,
+.video-link-section,
 .catalog-section,
 .support-strip,
 .about-section,
@@ -272,6 +273,29 @@ a {
 
 .featured p:not(.eyebrow) {
   max-width: 640px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.video-link-section {
+  display: flex;
+  max-width: 1180px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 10px;
+  padding-bottom: 36px;
+}
+
+.video-link-section h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.video-link-section p:not(.eyebrow) {
+  margin: 10px 0 0;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -803,6 +827,7 @@ button.checkout-button {
 
   .toolbar,
   .featured,
+  .video-link-section,
   .section-heading {
     display: grid;
     grid-template-columns: 1fr;
