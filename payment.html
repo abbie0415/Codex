@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment - Sakura Goods</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Sakura Goods home">
+        <span class="brand-mark">S</span>
+        <span>Sakura Goods</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Payment navigation">
+        <a href="index.html#catalog">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <a class="cart-button" href="index.html#catalog">Back to shop</a>
+    </header>
+
+    <main class="payment-page">
+      <section class="payment-hero" aria-labelledby="paymentTitle">
+        <p class="eyebrow">Payment</p>
+        <h1 id="paymentTitle">Complete your order</h1>
+        <p>
+          Review your Sakura Goods order, transfer the total amount to the bank
+          account below, then send the order details by email.
+        </p>
+      </section>
+
+      <section class="payment-layout" aria-label="Payment details">
+        <div class="payment-card">
+          <div class="payment-card-header">
+            <div>
+              <p class="eyebrow">Order summary</p>
+              <h2>Your products</h2>
+            </div>
+            <strong id="paymentItemCount">0 items</strong>
+          </div>
+
+          <div class="payment-items" id="paymentItems"></div>
+          <div class="payment-empty" id="paymentEmpty">
+            Your checkout cart is empty. Add products from the shop first.
+          </div>
+
+          <div class="payment-total">
+            <span>Total amount</span>
+            <strong id="paymentTotal">MYR 0.00</strong>
+          </div>
+        </div>
+
+        <aside class="payment-card bank-card">
+          <p class="eyebrow">Bank transfer</p>
+          <h2>Bank information</h2>
+          <div class="bank-info">
+            <span>Bank account</span>
+            <strong>1234</strong>
+          </div>
+          <p>
+            After payment, send the order summary to
+            <strong>lost0415@hotmail.com</strong> for confirmation.
+          </p>
+          <p class="receipt-reminder">
+            Remember to attach your payment receipt before sending the email.
+          </p>
+
+          <button class="checkout-button" id="sendOrderEmail" type="button">
+            Send order email
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="payment.js"></script>
+  </body>
+</html>

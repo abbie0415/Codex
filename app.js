@@ -92,6 +92,7 @@ const cartCount = document.querySelector("#cartCount");
 const cartTotal = document.querySelector("#cartTotal");
 const addFeatured = document.querySelector("#addFeatured");
 const contactForm = document.querySelector(".contact-form");
+const checkoutButton = document.querySelector("#checkoutButton");
 
 function formatPrice(value) {
   return new Intl.NumberFormat("en-US", {
@@ -177,7 +178,7 @@ function renderCart() {
         <p>${formatPrice(product.price)}</p>
       </div>
       <div class="qty-controls" aria-label="Quantity controls for ${product.name}">
-        <button type="button" data-qty-id="${product.id}" data-delta="-1" aria-label="Decrease quantity">−</button>
+        <button type="button" data-qty-id="${product.id}" data-delta="-1" aria-label="Decrease quantity">-</button>
         <span>${quantity}</span>
         <button type="button" data-qty-id="${product.id}" data-delta="1" aria-label="Increase quantity">+</button>
       </div>
@@ -193,6 +194,18 @@ function openCart() {
 function hideCart() {
   cartDrawer.classList.remove("open");
   cartDrawer.setAttribute("aria-hidden", "true");
+}
+
+function saveCheckoutCart() {
+  const checkoutItems = [...state.cart.values()].map(({ product, quantity }) => ({
+    id: product.id,
+    name: product.name,
+    price: product.price,
+    image: product.image,
+    quantity
+  }));
+
+  localStorage.setItem("sakuraCheckoutCart", JSON.stringify(checkoutItems));
 }
 
 document.querySelector(".category-tabs").addEventListener("click", (event) => {
@@ -235,6 +248,13 @@ cartDrawer.addEventListener("click", (event) => {
 addFeatured.addEventListener("click", () => {
   addToCart(bundle);
   openCart();
+});
+
+checkoutButton.addEventListener("click", () => {
+  if (state.cart.size === 0) return;
+
+  saveCheckoutCart();
+  window.location.href = "payment.html";
 });
 
 contactForm.addEventListener("submit", (event) => {
