@@ -10,15 +10,28 @@ function readCheckoutCart() {
 
   if (cartFromUrl) {
     try {
-      const parsedCart = JSON.parse(decodeURIComponent(cartFromUrl));
-      localStorage.setItem("sakuraCheckoutCart", JSON.stringify(parsedCart));
+      const parsedCart = JSON.parse(cartFromUrl);
+      try {
+        localStorage.setItem("sakuraCheckoutCart", JSON.stringify(parsedCart));
+      } catch (error) {
+        console.warn("Could not save URL checkout cart to browser storage.", error);
+      }
       return parsedCart;
     } catch (error) {
-      console.warn("Could not read checkout cart from URL.", error);
+      try {
+        return JSON.parse(decodeURIComponent(cartFromUrl));
+      } catch (fallbackError) {
+        console.warn("Could not read checkout cart from URL.", fallbackError);
+      }
     }
   }
 
-  return JSON.parse(localStorage.getItem("sakuraCheckoutCart") || "[]");
+  try {
+    return JSON.parse(localStorage.getItem("sakuraCheckoutCart") || "[]");
+  } catch (error) {
+    console.warn("Could not read checkout cart from browser storage.", error);
+    return [];
+  }
 }
 
 const checkoutCart = readCheckoutCart().map((item) => ({

@@ -205,8 +205,26 @@ function saveCheckoutCart() {
     quantity
   }));
 
-  localStorage.setItem("sakuraCheckoutCart", JSON.stringify(checkoutItems));
+  try {
+    localStorage.setItem("sakuraCheckoutCart", JSON.stringify(checkoutItems));
+  } catch (error) {
+    console.warn("Could not save checkout cart to browser storage.", error);
+  }
+
   return checkoutItems;
+}
+
+function goToCheckout() {
+  if (state.cart.size === 0) {
+    openCart();
+    return;
+  }
+
+  const checkoutItems = saveCheckoutCart();
+  const cartData = JSON.stringify(checkoutItems);
+  const checkoutUrl = new URL("payment.html", window.location.href);
+  checkoutUrl.searchParams.set("cart", cartData);
+  window.location.assign(checkoutUrl.href);
 }
 
 document.querySelector(".category-tabs").addEventListener("click", (event) => {
@@ -252,11 +270,7 @@ addFeatured.addEventListener("click", () => {
 });
 
 checkoutButton.addEventListener("click", () => {
-  if (state.cart.size === 0) return;
-
-  const checkoutItems = saveCheckoutCart();
-  const cartData = encodeURIComponent(JSON.stringify(checkoutItems));
-  window.location.href = `payment.html?cart=${cartData}`;
+  goToCheckout();
 });
 
 contactForm.addEventListener("submit", (event) => {
