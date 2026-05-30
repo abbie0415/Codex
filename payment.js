@@ -4,7 +4,24 @@ const paymentTotal = document.querySelector("#paymentTotal");
 const paymentItemCount = document.querySelector("#paymentItemCount");
 const sendOrderEmail = document.querySelector("#sendOrderEmail");
 
-const checkoutCart = JSON.parse(localStorage.getItem("sakuraCheckoutCart") || "[]").map((item) => ({
+function readCheckoutCart() {
+  const params = new URLSearchParams(window.location.search);
+  const cartFromUrl = params.get("cart");
+
+  if (cartFromUrl) {
+    try {
+      const parsedCart = JSON.parse(decodeURIComponent(cartFromUrl));
+      localStorage.setItem("sakuraCheckoutCart", JSON.stringify(parsedCart));
+      return parsedCart;
+    } catch (error) {
+      console.warn("Could not read checkout cart from URL.", error);
+    }
+  }
+
+  return JSON.parse(localStorage.getItem("sakuraCheckoutCart") || "[]");
+}
+
+const checkoutCart = readCheckoutCart().map((item) => ({
   ...item,
   price: Number(item.price) || 0,
   quantity: Number(item.quantity) || 0

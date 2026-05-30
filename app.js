@@ -206,6 +206,7 @@ function saveCheckoutCart() {
   }));
 
   localStorage.setItem("sakuraCheckoutCart", JSON.stringify(checkoutItems));
+  return checkoutItems;
 }
 
 document.querySelector(".category-tabs").addEventListener("click", (event) => {
@@ -253,8 +254,9 @@ addFeatured.addEventListener("click", () => {
 checkoutButton.addEventListener("click", () => {
   if (state.cart.size === 0) return;
 
-  saveCheckoutCart();
-  window.location.href = "payment.html";
+  const checkoutItems = saveCheckoutCart();
+  const cartData = encodeURIComponent(JSON.stringify(checkoutItems));
+  window.location.href = `payment.html?cart=${cartData}`;
 });
 
 contactForm.addEventListener("submit", (event) => {
