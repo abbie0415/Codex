@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northline Market</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Northline Market home">
+        <span class="brand-mark">N</span>
+        <span>Northline</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#catalog">Shop</a>
+        <a href="#featured">Featured</a>
+        <a href="#support">Support</a>
+      </nav>
+
+      <button class="cart-button" type="button" id="cartButton" aria-label="Open cart">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">Curated essentials for everyday style</p>
+          <h1 id="heroTitle">Northline Market</h1>
+          <p>
+            Shop refined home, travel, and personal goods selected for quality,
+            usefulness, and a calmer daily routine.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#catalog">Shop collection</a>
+            <a class="secondary-action" href="#featured">View picks</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Product controls">
+        <label class="search-field">
+          <span>Search products</span>
+          <input id="searchInput" type="search" placeholder="Search bags, lamps, ceramics..." />
+        </label>
+
+        <div class="category-tabs" role="tablist" aria-label="Product categories">
+          <button class="tab active" type="button" data-category="All">All</button>
+          <button class="tab" type="button" data-category="Home">Home</button>
+          <button class="tab" type="button" data-category="Travel">Travel</button>
+          <button class="tab" type="button" data-category="Style">Style</button>
+          <button class="tab" type="button" data-category="Wellness">Wellness</button>
+        </div>
+      </section>
+
+      <section class="featured" id="featured" aria-labelledby="featuredTitle">
+        <div>
+          <p class="eyebrow">Editor pick</p>
+          <h2 id="featuredTitle">Weekend carry set</h2>
+          <p>
+            A coordinated trio for travel days: a structured tote, insulated
+            bottle, and compact pouch.
+          </p>
+        </div>
+        <button class="primary-action compact" type="button" id="addFeatured">
+          Add bundle
+        </button>
+      </section>
+
+      <section class="catalog-section" id="catalog" aria-labelledby="catalogTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Catalog</p>
+            <h2 id="catalogTitle">Latest arrivals</h2>
+          </div>
+          <p id="resultCount">8 products</p>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="support-strip" id="support" aria-label="Shopping benefits">
+        <div>
+          <strong>Free shipping</strong>
+          <span>Orders over $75</span>
+        </div>
+        <div>
+          <strong>Easy returns</strong>
+          <span>30-day return window</span>
+        </div>
+        <div>
+          <strong>Secure checkout</strong>
+          <span>Encrypted payments</span>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Shopping cart">
+      <div class="cart-panel">
+        <div class="cart-header">
+          <h2>Your cart</h2>
+          <button class="icon-button" type="button" id="closeCart" aria-label="Close cart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty">Your cart is empty.</div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total</span>
+            <strong id="cartTotal">$0.00</strong>
+          </div>
+          <button class="checkout-button" type="button">Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
